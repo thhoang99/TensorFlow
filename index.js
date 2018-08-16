@@ -223,7 +223,7 @@ model.add(tf.layers.dense(
 // too high may overshoot optimal parameters. Learning rate is one of the most
 // important hyperparameters to set correctly. Finding the right value takes
 // practice and is often best found empirically by trying many values.
-const LEARNING_RATE = 0.15;
+const LEARNING_RATE = 0.1;
 
 // We are using Stochastic Gradient Descent (SGD) as our optimization algorithm.
 // This is the most famous modern optimization algorithm in deep learning and
@@ -249,12 +249,12 @@ model.compile({
 // during training. A value that is too low will update weights using too few
 // examples and will not generalize well. Larger batch sizes require more memory
 // resources and aren't guaranteed to perform better.
-const BATCH_SIZE = 64;
+const BATCH_SIZE = 32;
 
 // The number of batches to train on before freezing the model and considering
 // it trained. This will result in BATCH_SIZE x TRAIN_BATCHES examples being
 // fed to the model during training.
-const TRAIN_BATCHES = 200;
+const TRAIN_BATCHES = 300;
 
 // Every few batches, test accuracy over many examples. Ideally, we'd compute
 // accuracy over the whole test set, but for performance we'll use a subset.
